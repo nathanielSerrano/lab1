@@ -16,9 +16,9 @@ public class myArrayList {
 		
 	}
 	
-	public boolean contains(Fraction input) {
+    public boolean contains(Fraction input) {
+    	return List.contains(input);
+    }
 		
-		
-	}
 	
 }
