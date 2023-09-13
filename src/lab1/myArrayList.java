@@ -19,7 +19,7 @@ public class myArrayList {
 	
 	  public boolean add(Fraction input) {
         if (list.size() >= capacity) {
-            // If the list is full, calculate the new capacity based on the growth policy
+            //Calculate new growth rate is the list is full
             int newCapacity = (int) (capacity + capacity * growthPolicy);
             list.ensureCapacity(newCapacity);
             capacity = newCapacity;
