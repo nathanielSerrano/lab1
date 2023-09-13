@@ -35,9 +35,13 @@ public class myArrayList {
 	}
 	
 	public boolean contains(Fraction input) {
-		
-		
-	}
+        for (int i = 0; i < size; i++) {
+            if (data[i].hasSameValue(input)) {
+                return true; // Found a matching fraction
+            }
+        }
+        return false; // Fraction not found in the list
+    }
 	
 	
 	
