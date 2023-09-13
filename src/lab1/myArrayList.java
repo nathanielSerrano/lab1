@@ -30,19 +30,40 @@ public class myArrayList {
 
 	
 	public Fraction remove(Fraction input) {
-		
+		      // Check if the item to remove exists in the array
+        boolean found = false;
+        for (int i = 0; i < list.length; i++) {
+            if (list[i].hasSameValue(input)) {
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            return -1;
+        }
+        // Create a new array to hold the result with one less element
+        int[] result = new int[list.length - 1];
+        int resultIndex = 0;
+        // Copy elements from the original array to the result array, excluding the item to remove
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] != itemToRemove) {
+                result[resultIndex] = list[i];
+                resultIndex++;
+            }
+        }
+        return input;
+    }
 		
 	}
 	
 	public boolean contains(Fraction input) {
-        for (int i = 0; i < list.size; i++) {
+        for (int i = 0; i < list.length; i++) {
             if (list[i].hasSameValue(input)) {
-                return true; 
+                return true; // Found a matching fraction
             }
         }
-        return false;
-    }	
-
+        return false; // Fraction not found in the list
+    }
 	
 	
 	
