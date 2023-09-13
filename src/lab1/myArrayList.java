@@ -1,24 +1,48 @@
 package lab1;
 
 public class myArrayList {
-	public static final int INITIAL_CAPACITY = 50;
+	private static final int INITIAL_CAPACITY = 50;
+	private static final double GROWTH_RATE= 0.2;
+	private Fraction[] list = null;
+	private int size = INITIAL_CAPACITY;
 	
 	
 	
-	
-	public boolean add(Fraction input ) {
-		
-		return false;
+	public myArrayList() {
+		list = new Fraction[size];
+    }
+
+	public myArrayList(int n) {
+		list = new Fraction[n];
 	}
+	
+	
+	  public boolean add(Fraction input) {
+        if (list.size() >= capacity) {
+            //Calculate new growth rate is the list is full
+            int newCapacity = (int) (capacity + capacity * growthPolicy);
+            list.ensureCapacity(newCapacity);
+            capacity = newCapacity;
+        }
+        
+        return list.add(input);
+    }
+
 	
 	public Fraction remove(Fraction input) {
 		
 		
 	}
 	
-    public boolean contains(Fraction input) {
-    	return List.contains(input);
+	public boolean contains(Fraction input) {
+        for (int i = 0; i < list.size; i++) {
+            if (list[i].hasSameValue(input)) {
+                return true; 
+            }
+        }
+        return false;
     }
-		
+	
+	
 	
 }
