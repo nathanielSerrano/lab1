@@ -1,3 +1,4 @@
+package lab1;
 
 public interface INumber<T> {
   T plus(T input);
