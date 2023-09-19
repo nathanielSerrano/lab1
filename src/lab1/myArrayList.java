@@ -70,7 +70,7 @@ public class myArrayList {
             }
         }
         if (!found) {
-            return new Fraction(-1,1);
+            return null;
         }
         // Create a new array to hold the result with one less element
         Fraction[] result = new Fraction[list.length - 1];
