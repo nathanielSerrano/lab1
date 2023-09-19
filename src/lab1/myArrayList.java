@@ -28,7 +28,7 @@ public class myArrayList {
             capacity = newCapacity;
         }
         **/
-		
+		 
 		if(size >= capacity)
 			reconfigure();
 		
