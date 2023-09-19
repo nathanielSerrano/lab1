@@ -17,6 +17,27 @@ public class myArrayList {
 		list = new Fraction[n];
 	}
 	
+	 public static void main(String[] args) {
+		 myArrayList myList = new myArrayList();
+
+	     // Test the add method
+	     myList.add(new Fraction(1, 2));
+	     myList.add(new Fraction(3, 4));
+	     // ...
+
+	     // Test the remove method
+	     Fraction removedFraction = myList.remove(new Fraction(1, 2));
+	     if (removedFraction != null) {
+	         System.out.println("Removed Fraction: " + removedFraction);
+	     } else {
+	         System.out.println("Fraction not found.");
+	     }
+
+	     // Test the contains method
+	     boolean containsFraction = myList.contains(new Fraction(3, 4));
+	     System.out.println("Contains Fraction (3/4): " + containsFraction);
+	 }
+
 	
 	  public boolean add(Fraction input) {
 	        
@@ -74,6 +95,7 @@ public class myArrayList {
         }
         return false; // Fraction not found in the list
     }
+	
 	public int Size() {
 		return size;
 		
