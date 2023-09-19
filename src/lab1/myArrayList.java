@@ -28,7 +28,7 @@ public class myArrayList {
 	     // Test the remove method
 	     Fraction removedFraction = myList.remove(new Fraction(1, 2));
 	     if (removedFraction != null) {
-	         System.out.println("Removed Fraction: " + removedFraction);
+	         System.out.println("Removed Fraction: "); removedFraction.print();
 	     } else {
 	         System.out.println("Fraction not found.");
 	     }
@@ -58,7 +58,13 @@ public class myArrayList {
 		return false;
     }
 
-	
+	/**
+	 * remove() - Takes a Fraction object as input and returns input if the 
+	 * object is successfully removed from the list; Otherwise returns null
+	 * @param input - Fraction object
+	 * @return - Returns input if object is successfully removed from list;
+	 * otherwise returns null if input is not found in list.
+	 */
 	public Fraction remove(Fraction input) {
 		Fraction itemToRemove = input;
 		      // Check if the item to remove exists in the array
