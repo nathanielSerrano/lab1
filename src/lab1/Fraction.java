@@ -1,7 +1,7 @@
 package lab1;
 import java.util.*;
 
-public class Fraction implements INumber<Fraction>  {
+public class Fraction implements INumber<Fraction>, Comparable<Fraction>  {
   int numerator;
   int denominator;
   
@@ -372,6 +372,17 @@ public static void main(String[] args) {
 		System.out.print("after:  [");
 		printReverse(fractionArray);
 		System.out.print("]");
+}
+
+/**
+ * Nathaniel Serrano
+ * compareTo method to meet req for implenting
+ * Comparable interface.
+ */
+@Override
+public int compareTo(Fraction o) {
+	// TODO Auto-generated method stub
+	return this.compareTo(o);
 }
 
 }
