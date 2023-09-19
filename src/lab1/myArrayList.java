@@ -59,6 +59,7 @@ public class myArrayList {
     }
 
 	/**
+	 * Nathaniel Serrano
 	 * remove() - Takes a Fraction object as input and returns input if the 
 	 * object is successfully removed from the list; Otherwise returns null
 	 * @param input - Fraction object
