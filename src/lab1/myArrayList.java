@@ -17,13 +17,15 @@ public class myArrayList {
 		list = new Fraction[n];
 	}
 	
-	 public static void main(String[] args) {
+	public static void main(String[] args) {
 		 myArrayList myList = new myArrayList();
 
 	     // Test the add method
 	     myList.add(new Fraction(1, 2));
 	     myList.add(new Fraction(3, 4));
-	     // ...
+	     for (int i=0;i<myList.size(); i++) {
+	    	 myList.get(i).print();
+	     }
 
 	     // Test the remove method
 	     Fraction removedFraction = myList.remove(new Fraction(1, 2));
@@ -54,7 +56,7 @@ public class myArrayList {
 			reconfigure();
 		
         
-       // return list.add(input);
+      // return list.add(input);
 		return false;
     }
 
@@ -103,9 +105,17 @@ public class myArrayList {
         return false; // Fraction not found in the list
     }
 	
-	public int Size() {
+	public int size() {
 		return size;
 		
+	}
+	
+	public Fraction get(int index) {
+		for (int i=0;i<list.length;i++) {
+			if (i == index)
+				return list[i];
+		}
+		return null;
 	}
 	
 	
