@@ -96,14 +96,21 @@ public class myArrayList {
 		
 	
 	
-	public boolean contains(Fraction input) {
-        for (int i = 0; i < list.length; i++) {
-            if (list[i].hasSameValue(input)) {
-                return true; // Found a matching fraction
-            }
+	/**
+ * Checks if the given Fraction object exists in the array.
+ *
+ * @param input The Fraction object to check for existence.
+ * @return true if the Fraction is found in the array, false otherwise.
+ */
+public boolean contains(Fraction input) {
+    for (int i = 0; i < list.length; i++) {
+        if (list[i].hasSameValue(input)) {
+            return true; // Found a matching fraction
         }
-        return false; // Fraction not found in the list
     }
+    return false; // Fraction not found in the list
+}
+
 	
 	public int size() {
 		return size;
