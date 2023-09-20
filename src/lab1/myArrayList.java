@@ -40,24 +40,19 @@ public class myArrayList {
 	     System.out.println("Contains Fraction (3/4): " + containsFraction);
 	 }
 
-	
+	//Coby Andersen
+	/**
+ * Adds a Fraction object to the myArrayList.
+ * @param input The Fraction object to be added to the list.
+ * @return true if the addition was successful, false otherwise.
+ */
 	  public boolean add(Fraction input) {
-	        
-		  /** this can be done with my reconfigure method
-		  if (list.length() >= capacity) {
-            // If the list is full, calculate the new capacity based on the growth policy
-            int newCapacity = (int) (capacity + capacity * growthPolicy);
-            list.ensureCapacity(newCapacity);
-            capacity = newCapacity;
-        }
-        **/
-		 
-		if(size >= capacity)
+		if(size >= capacity) {
 			reconfigure();
-		
-        
-      // return list.add(input);
-		return false;
+		}
+		  list[size] = input;
+		  size++;
+		  return true;
     }
 
 	/**
