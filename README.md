@@ -1,8 +1,8 @@
 Group Members: Ethan Gilles, Coby Anderson, Nathaniel Serrano, Mandy Ho
 # lab1 ----ASSIGNMENTS-----
-Coby -- Implmenting add method
+Coby -- Implementing add method
 
-Mandy -- Implmenting contains method
+Mandy -- Implementing contains method
 
 Ethan -- Implement ArrayList class, implemeting reconfigure method
 
