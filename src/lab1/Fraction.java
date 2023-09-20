@@ -384,5 +384,8 @@ public int compareTo(Fraction o) {
 	// TODO Auto-generated method stub
 	return this.compareTo(o);
 }
+public String toString() {
+	return this.numerator + "/" + this.denominator;
+}
 
 }
