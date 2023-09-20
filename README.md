@@ -6,8 +6,8 @@ Mandy -- Implementing contains method
 
 Ethan -- Implement ArrayList class, implemeting reconfigure method
 
-Nathaniel -- Set up GitHub repository, implemting remove method, implementing main method
+Nathaniel -- Set up GitHub repository, implementing remove method, implementing main method
 
 # --- Instructions for running code ---
 
-The main method is inside the myArrayList class. Just compile and run the myArrayList class, with no arguments, and the Fraction myArrayList will be created with outputs for each implemented method being shown.
+The main method is inside the myArrayList class. To execute, compile and run the myArrayList class, with no arguments, and a myArrayList of Fractions will be created with outputs for each implemented method being shown.
