@@ -54,40 +54,36 @@ public class myArrayList {
 		  size++;
 		  return true;
     }
-
-	/**
-	 * Nathaniel Serrano
-	 * remove() - Takes a Fraction object as input and returns input if the 
-	 * object is successfully removed from the list; Otherwise returns null
-	 * @param input - Fraction object
-	 * @return - Returns input if object is successfully removed from list;
-	 * otherwise returns null if input is not found in list.
-	 */
+ /**
+  * Nathaniel Serrano
+  * remove() - Takes a Fraction object as input and returns input if the 
+  * object is successfully removed from the list; Otherwise returns null
+  * @param input - Fraction object
+  * @return - Returns input if object is successfully removed from list;
+  * otherwise returns null if input is not found in list.
+  */
 	public Fraction remove(Fraction input) {
-		Fraction itemToRemove = input;
-		      // Check if the item to remove exists in the array
-        boolean found = false;
-        for (int i = 0; i < list.length; i++) {
-            if (list[i].hasSameValue(input)) {
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            return null;
-        }
-        // Create a new array to hold the result with one less element
-        Fraction[] result = new Fraction[list.length - 1];
-        int resultIndex = 0;
-        // Copy elements from the original array to the result array, excluding the item to remove
-        for (int i = 0; i < list.length; i++) {
-            if (list[i] != itemToRemove) {
-                result[resultIndex] = list[i];
-                resultIndex++;
-            }
-        }
-        return input;
-    }
+		int indexOfInput=0;
+	     // Check if the item to remove exists in the array
+	    boolean found = false;
+	        for (int i = 0; i < list.length; i++) {
+	            if (list[i].hasSameValue(input)) {
+	                found = true;
+	                indexOfInput=i;
+	                break;
+	            }
+	        }
+	    if (!found) {
+	        return null;
+	        }
+	    // Create a new array to hold the result with one less element
+	    int numMoved = size - indexOfInput - 1;
+	    if (numMoved > 0)
+	    System.arraycopy(list, indexOfInput+1, list, indexOfInput, numMoved);
+	    list[--size] = null;
+	        
+	    return input;
+	}
 		
 	
 	
